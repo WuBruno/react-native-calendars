@@ -199,7 +199,7 @@ class ReservationList extends Component {
       <FlatList
         ref={(c) => this.list = c}
         style={this.props.style}
-        contentContainerStyle={this.styles.content}
+        contentContainerStyle={[this.styles.content, { paddingBottom: 100 }]}
         renderItem={this.renderRow.bind(this)}
         data={this.state.reservations}
         onScroll={this.onScroll.bind(this)}
